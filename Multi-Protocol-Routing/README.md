@@ -27,17 +27,14 @@ This repository documents the configuration and verification of a complex networ
  neighbor 192.168.18.8 remote-as 200
  redistribute ospf 10 match internal external 1 external 2
 
- Default Route Injection (R1)
- ip route 0.0.0.0 0.0.0.0 <next-hop>
 router ospf 10
  default-information originate
 
 
-🔹 Verification
+🔹 Verification 
 Routing Tables
-
-show ip route → Confirm EIGRP routes appear as OSPF E2 in ASN 200
-show ip bgp → Confirm OSPF external routes are redistributed into BGP
+show ip route  → Confirm EIGRP routes appear as OSPF E2 in ASN 200
+show ip bgp    → Confirm OSPF external routes are redistributed into BGP
 
 Connectivity Tests
 ping and traceroute from R7 → R9 successful via R1 → R8
