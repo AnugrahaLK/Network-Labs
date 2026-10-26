@@ -62,7 +62,6 @@ Use the VPN command matching the configured IKE version and platform.
 - [ ] Zabbix monitors HQ, DC, and branch devices.
 - [ ] GNS3 project saves and reopens correctly.
 
-## Before publishing
-Replace example values with verified values from your final configuration. Remove passwords, pre-shared keys, real credentials, and personal information. Do not upload vendor appliance images unless redistribution is permitted.
 
-The actual GNS3 project file is not included in this documentation package. Add your saved `.gns3` project and required project files after verifying that it opens correctly.
+
+
