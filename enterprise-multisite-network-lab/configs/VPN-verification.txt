@@ -1,0 +1,11 @@
+! Run commands supported by your IOS image:
+show ip interface brief
+show ip route
+show crypto isakmp sa
+show crypto ikev2 sa
+show crypto ipsec sa
+
+! Generate traffic across the VPN, then verify encapsulation and
+! decapsulation counters increase. Confirm return routing too.
+! For failover, verify route tracking or the configured routing protocol
+! actually detects the primary-path failure.

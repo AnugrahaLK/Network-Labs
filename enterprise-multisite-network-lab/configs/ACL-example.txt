@@ -1,0 +1,14 @@
+! EXAMPLE ONLY — merge with existing ACLs; do not overwrite working policy blindly.
+! Example: deny Finance to Data Servers and Management.
+ip access-list extended FINANCE-RESTRICT
+ deny ip 192.168.20.0 0.0.0.63 192.168.70.0 0.0.0.63
+ deny ip 192.168.20.0 0.0.0.63 192.168.90.0 0.0.0.63
+ permit ip any any
+!
+interface vlan 20
+ ip access-group FINANCE-RESTRICT in
+!
+! Verify:
+! show access-lists FINANCE-RESTRICT
+! show ip interface vlan 20
+! show vrrp brief
